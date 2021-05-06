@@ -1,4 +1,6 @@
-package com.example.spwn1;
+package com.example.spwn2;
+
+
 
 import android.app.Notification;
 import android.app.Service;
@@ -40,9 +42,9 @@ public class NotificationListener extends NotificationListenerService {
         int notificationCode = matchNotificationCode(sbn);
 
 //        Log. i ( "TAG" , "ID :" + sbn.getId() + " \t " + sbn.getNotification().tickerText + " \t " + sbn.getPackageName()) ;
-            Intent intent = new  Intent("Got_notif");
-            intent.putExtra("Notification Code", notificationCode);
-            sendBroadcast(intent);
+        Intent intent = new  Intent("Got_notif");
+        intent.putExtra("Notification Code", notificationCode);
+        sendBroadcast(intent);
 
 
 
@@ -99,7 +101,7 @@ public class NotificationListener extends NotificationListenerService {
                 " \n ID        : " + id);
 
 
-        if (packageName.equals(ApplicationPackageNames.WHATSAPP_PACK_NAME) && title.equals("Babe" + "🍑") && id == 1){
+        if (packageName.equals(ApplicationPackageNames.WHATSAPP_PACK_NAME) && title.equals("Babe" + "🍑") && id == 23){
             return(InterceptedNotificationCode.BABY);
         }
         else{
